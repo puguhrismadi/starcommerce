@@ -9,7 +9,5 @@ class CustomerController extends Controller
     public function index(){
         return "Halaman Index Customer";
     }
-    public function viewform(){
-        return view('customer.register');
-    }
+   
 }

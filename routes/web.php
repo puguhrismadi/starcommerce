@@ -27,6 +27,22 @@ Route::get('/home1',function (){
 Route::get('/home',function (){
     return view('home');
 });
-//Route::get('/calonsiswa','CalonsiswaController@index')->name('calonsiswa.index-calon');
+Route::get('/catalog',function (){
+    return view('page.catalog');
+});
+Route::get('/list-product',function (){
+    return view('product.list_product');
+});
+Route::get('/detail-product',function (){
+    return view('product.detail_product');
+});
+
 Route::get('/customer','CustomerController@index');
-Route::get('/register','CustomerController@viewform');
+
+
+Route::get('/login', 'AuthController@login');
+Route::post('/proses-login', 'AuthController@proses_login');
+Route::get('/register', 'AuthController@register');
+Route::post('/proses-register', 'AuthController@proses_register');
+Route::get('/dashboard', 'AuthController@dashboard');
+Route::get('/logout', 'AuthController@logout');
