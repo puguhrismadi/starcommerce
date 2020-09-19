@@ -2,7 +2,7 @@
 @section('title','Login')
 @section('content')
 <section class="uk-section uk-section-small">
-    <form action="/proses-login" method="post">
+    <form action="{{ url('/proses-login')}}" method="post">
         @csrf
         <div class="uk-container">
             <div class="uk-grid-medium " uk-grid>

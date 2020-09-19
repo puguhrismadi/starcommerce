@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use Validator,Redirect,Response;
 use App\User;
 use Illuminate\Support\Facades\Auth;
-class AuthController extends Controller
+use Illuminate\Support\Facades\DB;
+class LoginController extends Controller
 {
     public function register(){
         return view('customer.register');
@@ -74,9 +75,10 @@ class AuthController extends Controller
         $email = $request->email;
         $password = $request->password;
 
-        $data = User::where('email',$email);
-        echo $data->password;
-        //return $data;
+        $data =  DB::table('users')->where('email', $email)->first();
+        //echo $data->name;
+        //return $password;
+        //dd($data->email);
         if($data){ //apakah email tersebut ada atau tidak
             if(Hash::check($password,$data->password)){
                 Session::put('name',$data->name);

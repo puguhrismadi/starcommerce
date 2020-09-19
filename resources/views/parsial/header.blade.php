@@ -54,7 +54,7 @@
         <div class="uk-container" uk-navbar>
             <div class="uk-navbar-left"><button class="uk-navbar-toggle uk-hidden@m"
                     uk-toggle="target: #nav-offcanvas" uk-navbar-toggle-icon></button><a
-                    class="uk-navbar-item uk-logo" href="index.html"><img src="images/logoo.png" width="90"
+                    class="uk-navbar-item uk-logo" href="index.html"><img src="{{ asset('images/logoo.png')}}" width="90"
                         height="32" alt="Logo"></a>
                 <nav class="uk-visible@m">
                     <ul class="uk-navbar-nav">
