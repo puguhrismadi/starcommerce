@@ -19,5 +19,18 @@ class CustomerController extends Controller
         $userone=User::find($user);
         return view('admin.detail_customer',['user'=>$userone]);
     }
+    public function edit($user){
+        $userone=User::find($user);
+        return view('admin.form_update',['user'=>$userone]);
+    }
+    public function prosesEdit(Request $request,User $user){
+        $validateData = $request->validate([
+            'name'=>'required',
+            'email'=>'required'
+            
+        ]);
+        User::where('id',$user->id)->update($validateData);
+       return redirect(url('/customer'))->with('pesan',"Data Berhasil di Ubah {$validateData['name']}");
+    }
    
 }

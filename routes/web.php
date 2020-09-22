@@ -39,16 +39,24 @@ Route::get('/detail-product',function (){
 Route::get('/customer/{user}',"CustomerController@detail")->name('customer.detail');
 
 Route::get('/customer','CustomerController@index')->name('customer.index');;
+Route::get('/account/{user}',"CustomerController@edit")->name('customer.edit');
 
+//untuk proses edit 
+Route::patch('/customer/{user}','CustomerController@prosesEdit')->name('update.account');
 Route::get('/hapus-customer/{user}','CustomerController@hapus');
 
 
-Route::get('/login', 'LoginController@login');
-Route::post('/proses-login', 'LoginController@loginPost');
-Route::get('/register', 'LoginController@register');
-Route::post('/proses-register', 'LoginController@proses_register');
-Route::get('/dashboard', 'AuthController@dashboard');
-Route::get('/logout', 'AuthController@logout');
+// Route::get('/login', 'LoginController@login');
+// Route::post('/proses-login', 'LoginController@loginPost');
+// Route::get('/register', 'LoginController@register');
+// Route::post('/proses-register', 'LoginController@proses_register');
+// Route::get('/dashboard', 'AuthController@dashboard');
+// Route::get('/logout', 'AuthController@logout');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
