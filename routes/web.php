@@ -13,26 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('page.homepage');
-});
+Route::get('/', "HomeController@index");
 
 Route::get('/blog', function () {
     return view('page.blog');
 });
-Route::get('/home1',function (){
-    return "<h1>ini Home</h1>";
-});
 
-Route::get('/home',function (){
-    return view('home');
-});
 Route::get('/catalog',function (){
     return view('page.catalog');
 });
 Route::get('/list-product',function (){
     return view('product.list_product');
 });
+Route::get('/artikel/{slug}',"HomeController@artikel");
 Route::get('/detail-product',function (){
     return view('product.detail_product');
 });
