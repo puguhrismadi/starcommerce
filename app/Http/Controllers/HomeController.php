@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Kategoriproduk;
 class HomeController extends Controller
 {
     /**
@@ -24,7 +25,8 @@ class HomeController extends Controller
     public function index()
     {
         $blog = Post::where('featured','1')->get()->take(2);
-        return view('page.homepage',['blog'=>$blog]);
+        $kategori = Kategoriproduk::all();
+        return view('page.homepage',['blog'=>$blog,'kategori'=>$kategori]);
     }
     public function artikel($slug){
         $post = Post::where('slug', '=', $slug)->firstOrFail();
