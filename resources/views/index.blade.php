@@ -8,6 +8,7 @@
     <title>@yield('title','Home')</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="{{ asset('styles/style.css')}}">
+    <link rel="shortcut icon" href="{{{ asset('images/logoo.png') }}}">
     <script src="{{ asset('scripts/uikit.js')}}"></script>
     <script src="{{ asset('scripts/uikit-icons.js')}}"></script>
 </head>
