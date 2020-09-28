@@ -50,7 +50,7 @@
         @include('parsial.header')
        <!--  end header -->
        
-           @yield('content')
+        @yield('content')
        
        <!-- footer start -->
        @include('parsial.footer')

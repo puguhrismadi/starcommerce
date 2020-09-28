@@ -8,10 +8,7 @@
                                     uk-icon="icon: receiver; ratio: .75;"></span><span class="tm-pseudo">8 800 799 99 99</span></a></li>
                         <li><a href="contacts.html" onclick="return false"><span class="uk-margin-xsmall-right uk-icon"
                                     uk-icon="icon: location; ratio: .75;"></span><span class="tm-pseudo">Store in St. Petersburg</span><span
-                                    uk-icon="icon: triangle-down; ratio: .75;" class="uk-icon"><svg width="15"
-                                        height="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <polygon points="5 7 15 7 10 12"></polygon>
-                                    </svg></span></a>
+                                    uk-icon="icon: triangle-down; ratio: .75;" class="uk-icon"></span></a>
                             <div class="uk-margin-remove uk-drop" uk-drop="mode: click; pos: bottom-center;">
                                 <div
                                     class="uk-card uk-card-default uk-card-small uk-box-shadow-xlarge uk-overflow-hidden uk-padding-small uk-padding-remove-horizontal uk-padding-remove-bottom">
@@ -116,26 +113,14 @@
                                         <div class="uk-margin-small"><a
                                                 class="uk-link-muted uk-text-uppercase tm-link-to-all uk-link-reset"
                                                 href="contacts.html"><span>contacts</span><span
-                                                    uk-icon="icon: chevron-right; ratio: .75;" class="uk-icon"><svg
-                                                        width="15" height="15" viewBox="0 0 20 0"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <polyline fill="none" stroke="#000" stroke-width="1.03"
-                                                            points="7 4 13 10 7 16"></polyline>
-                                                    </svg></span></a></div>
+                                                    uk-icon="icon: chevron-right; ratio: .75;" class="uk-icon"></span></a></div>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="uk-navbar-item"><span class="uk-margin-xsmall-right uk-icon"
-                                    uk-icon="icon: clock; ratio: .75;"><svg width="15" height="15" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9">
-                                        </circle>
-                                        <rect x="9" y="4" width="1" height="7"></rect>
-                                        <path fill="none" stroke="#000" stroke-width="1.1"
-                                            d="M13.018,14.197 L9.445,10.625"></path>
-                                    </svg></span>Daily 10:00–22:00</div>
+                                    uk-icon="icon: clock; ratio: .75;"></span>Daily 10:00–22:00</div>
                         </li>
                     </ul>
                 </nav>
@@ -260,11 +245,7 @@
                             </div>
                         </li>
                         <li><a href="brands.html" aria-expanded="false" class="">Brands<span
-                                    class="uk-margin-xsmall-left uk-icon" uk-icon="icon: chevron-down; ratio: .75;"><svg
-                                        width="15" height="15" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7">
-                                        </polyline>
-                                    </svg></span></a>
+                                    class="uk-margin-xsmall-left uk-icon" uk-icon="icon: chevron-down; ratio: .75;"></span></a>
                             <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove-vertical uk-drop uk-drop-boundary uk-drop-bottom-center uk-animation-fade uk-animation-enter"
                                 uk-drop="pos: bottom-justify;delay-show: 125;delay-hide: 50;duration: 75;boundary: .tm-navbar-container;boundary-align: true;pos: bottom-justify;flip: x"
                                 style="width: 1280px; left: 0.000334351px; top: 61px; animation-duration: 75ms;">
@@ -380,11 +361,7 @@
                             </div>
                         </li>
                         <li><a href="#" aria-expanded="false" class="">Pages<span class="uk-margin-xsmall-left uk-icon"
-                                    uk-icon="icon: chevron-down; ratio: .75;"><svg width="15" height="15"
-                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7">
-                                        </polyline>
-                                    </svg></span></a>
+                                    uk-icon="icon: chevron-down; ratio: .75;"></span></a>
                             <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove-vertical uk-drop uk-drop-boundary uk-drop-bottom-center uk-animation-fade uk-animation-enter"
                                 uk-drop="pos: bottom-justify;delay-show: 125;delay-hide: 50;duration: 75;boundary: .tm-navbar-container;boundary-align: true;pos: bottom-justify;flip: x"
                                 style="width: 1280px; left: 0px; top: 61px; animation-duration: 75ms;">
@@ -422,11 +399,7 @@
                 </nav>
             </div>
             <div class="uk-navbar-right"><a class="uk-navbar-toggle tm-navbar-button uk-search-icon uk-icon" href="#"
-                    uk-search-icon=""><svg width="20" height="20" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
-                        <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
-                    </svg></a>
+                    uk-search-icon=""></a>
                 <div class="uk-navbar-dropdown uk-padding-small uk-margin-remove"
                     uk-drop="mode: click;cls-drop: uk-navbar-dropdown;boundary: .tm-navbar-container;boundary-align: true;pos: bottom-justify;flip: x">
                     <div class="uk-container">
@@ -436,28 +409,13 @@
                                         type="search" placeholder="Search…" autofocus=""></form>
                             </div>
                             <div class="uk-width-auto"><a class="uk-navbar-dropdown-close uk-close uk-icon" href="#"
-                                    uk-close=""><svg width="14" height="14" viewBox="0 0 14 14"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13"
-                                            y2="13"></line>
-                                        <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1"
-                                            y2="13"></line>
-                                    </svg></a></div>
+                                    uk-close=""></a></div>
                         </div>
                     </div>
                 </div><a class="uk-navbar-item uk-link-muted uk-visible@m tm-navbar-button" href="compare.html"><span
-                        uk-icon="copy" class="uk-icon"><svg width="20" height="20" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect fill="none" stroke="#000" x="3.5" y="2.5" width="12" height="16"></rect>
-                            <polyline fill="none" stroke="#000" points="5 0.5 17.5 0.5 17.5 17"></polyline>
-                        </svg></span><span class="uk-badge">3</span></a><a
+                        uk-icon="copy" class="uk-icon"></span><span class="uk-badge">3</span></a><a
                     class="uk-navbar-item uk-link-muted tm-navbar-button uk-icon" href="account.html" uk-icon="user"
-                    aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle fill="none" stroke="#000" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
-                        <path fill="none" stroke="#000" stroke-width="1.1"
-                            d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
-                    </svg></a>
+                    aria-expanded="false"></a>
                 <div class="uk-padding-small uk-margin-remove uk-dropdown uk-animation-fade uk-animation-enter"
                     uk-dropdown="pos: bottom-right; offset: -10; delay-hide: 200;"
                     style="min-width: 150px; left: 1055px; top: 50px; animation-duration: 200ms;">
@@ -472,13 +430,7 @@
                         <li><a href="#">Log out</a></li>
                     </ul>
                 </div><a class="uk-navbar-item uk-link-muted tm-navbar-button" href="cart.html"
-                    uk-toggle="target: #cart-offcanvas" onclick="return false"><span uk-icon="cart" class="uk-icon"><svg
-                            width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7.3" cy="17.3" r="1.4"></circle>
-                            <circle cx="13.3" cy="17.3" r="1.4"></circle>
-                            <polyline fill="none" stroke="#000" points="0 2 3.2 4 5.3 12.5 16 12.5 18 6.5 8 6.5">
-                            </polyline>
-                        </svg></span><span class="uk-badge">2</span></a>
+                    uk-toggle="target: #cart-offcanvas" onclick="return false"><span uk-icon="cart" class="uk-icon"></span><span class="uk-badge">2</span></a>
             </div>
         </div>
     </div>
