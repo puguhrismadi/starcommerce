@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Kategoriproduk;
+use App\Laptop_komputer;
 class HomeController extends Controller
 {
     /**
@@ -26,7 +27,8 @@ class HomeController extends Controller
     {
         $blog = Post::where('featured','1')->get()->take(2);
         $kategori = Kategoriproduk::all();
-        return view('page.homepage',['blog'=>$blog,'kategori'=>$kategori]);
+        $laptopk = Laptop_komputer::where('feature',1)->get();
+        return view('page.homepage',['blog'=>$blog,'kategori'=>$kategori,'laptopk'=>$laptopk]);
     }
     public function artikel($slug){
         $post = Post::where('slug', '=', $slug)->firstOrFail();

@@ -420,6 +420,7 @@
                     uk-dropdown="pos: bottom-right; offset: -10; delay-hide: 200;"
                     style="min-width: 150px; left: 1055px; top: 50px; animation-duration: 200ms;">
                     <ul class="uk-nav uk-dropdown-nav">
+                        <li>   {{ Auth::user()->name }}</li>
                         <li><a href="account.html">Pesanan
                                 <span>(2)</span></a></li>
                         <li><a href="favorites.html">Favorites
@@ -427,7 +428,15 @@
                         <li><a href="personal.html">Personal</a></li>
                         <li><a href="settings.html">Settings</a></li>
                         <li class="uk-nav-divider"></li>
-                        <li><a href="#">Log out</a></li>
+                        <li><a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                             {{ __('Logout') }}
+                         </a>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                           
+                        </form></li>
                     </ul>
                 </div><a class="uk-navbar-item uk-link-muted tm-navbar-button" href="cart.html"
                     uk-toggle="target: #cart-offcanvas" onclick="return false"><span uk-icon="cart" class="uk-icon"></span><span class="uk-badge">2</span></a>
