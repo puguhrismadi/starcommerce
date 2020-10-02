@@ -4,6 +4,9 @@
     
         <section class="uk-section uk-section-small">
           <div class="uk-container">
+         
+               
+          
             <div class="uk-grid-medium uk-child-width-1-1" uk-grid>
               <div class="uk-text-center">
                 <ul class="uk-breadcrumb uk-flex-center uk-margin-remove">
@@ -12,14 +15,12 @@
                   <li><a href="category.html">Laptops &amp; Tablets</a></li>
                   <li><a href="subcategory.html">Laptops</a></li>
                   <li>
-                    <span
-                      >Apple MacBook Pro 15&quot; Touch Bar MPTU2LL/A 256GB
-                      (Silver)</span
+                    <span>{{$produk->nama}} </span
                     >
                   </li>
                 </ul>
                 <h1 class="uk-margin-small-top uk-margin-remove-bottom">
-                  Apple MacBook Pro 15&quot; Touch Bar MPTU2LL/A 256GB (Silver)
+                  {{$produk->nama}}
                 </h1>
               </div>
               <div>
@@ -43,58 +44,48 @@
                                 <li>
                                   <a
                                     class="uk-card-body tm-media-box tm-media-box-zoom"
-                                    href="images/products/1/1-large.jpg"
+                                    href="{{Voyager::image($produk->gambar1)}}"
                                     ><figure class="tm-media-box-wrap">
                                       <img
-                                        src="images/products/1/1-large.jpg"
-                                        alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                        src="{{Voyager::image($produk->gambar1)}}"
+                                        alt='{{$produk->gambar1}}'
                                       /></figure
                                   ></a>
                                 </li>
                                 <li>
                                   <a
                                     class="uk-card-body tm-media-box tm-media-box-zoom"
-                                    href="images/products/1/1-add-1-large.jpg"
+                                    href="{{Voyager::image($produk->gambar2)}}"
                                     ><figure class="tm-media-box-wrap">
                                       <img
-                                        src="images/products/1/1-add-1-large.jpg"
-                                        alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                        src="{{Voyager::image($produk->gambar2)}}"
+                                        alt='{{$produk->gambar2}}'
                                       /></figure
                                   ></a>
                                 </li>
                                 <li>
                                   <a
                                     class="uk-card-body tm-media-box tm-media-box-zoom"
-                                    href="images/products/1/1-add-2-large.jpg"
+                                    href="{{Voyager::image($produk->gambar3)}}"
                                     ><figure class="tm-media-box-wrap">
                                       <img
-                                        src="images/products/1/1-add-2-large.jpg"
-                                        alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                        src="{{Voyager::image($produk->gambar3)}}"
+                                        alt='{{$produk->gambar3}}'
                                       /></figure
                                   ></a>
                                 </li>
                                 <li>
                                   <a
                                     class="uk-card-body tm-media-box tm-media-box-zoom"
-                                    href="images/products/1/1-add-3-large.jpg"
+                                    href="{{Voyager::image($produk->gambar3)}}"
                                     ><figure class="tm-media-box-wrap">
                                       <img
-                                        src="images/products/1/1-add-3-large.jpg"
-                                        alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                        src="{{Voyager::image($produk->gambar3)}}"
+                                        alt='{{$produk->gambar3}}'
                                       /></figure
                                   ></a>
                                 </li>
-                                <li>
-                                  <a
-                                    class="uk-card-body tm-media-box tm-media-box-zoom"
-                                    href="images/products/1/1-add-4-large.jpg"
-                                    ><figure class="tm-media-box-wrap">
-                                      <img
-                                        src="images/products/1/1-add-4-large.jpg"
-                                        alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
-                                      /></figure
-                                  ></a>
-                                </li>
+                               
                               </ul>
                             </div>
                             <div>
@@ -114,8 +105,8 @@
                                                   class="tm-media-box-wrap"
                                                 >
                                                   <img
-                                                    src="images/products/1/1-small.jpg"
-                                                    alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                                    src="{{Voyager::image($produk->gambar1)}}"
+                                                    alt='{{$produk->gambar1}}'
                                                   /></figure
                                               ></a>
                                             </div>
@@ -129,8 +120,8 @@
                                                   class="tm-media-box-wrap"
                                                 >
                                                   <img
-                                                    src="images/products/1/1-add-1-small.jpg"
-                                                    alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                                    src="{{Voyager::image($produk->gambar2)}}"
+                                                    alt='{{$produk->gambar2}}'
                                                   /></figure
                                               ></a>
                                             </div>
@@ -144,8 +135,8 @@
                                                   class="tm-media-box-wrap"
                                                 >
                                                   <img
-                                                    src="images/products/1/1-add-2-small.jpg"
-                                                    alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                                    src="{{Voyager::image($produk->gambar3)}}"
+                                                    alt='{{$produk->gambar3}}'
                                                   /></figure
                                               ></a>
                                             </div>
@@ -159,13 +150,13 @@
                                                   class="tm-media-box-wrap"
                                                 >
                                                   <img
-                                                    src="images/products/1/1-add-3-small.jpg"
-                                                    alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                                    src="{{Voyager::image($produk->gambar3)}}"
+                                                    alt='{{$produk->gambar3}}'
                                                   /></figure
                                               ></a>
                                             </div>
                                           </li>
-                                          <li uk-slideshow-item="4">
+                                          {{-- <li uk-slideshow-item="4">
                                             <div class="tm-ratio tm-ratio-1-1">
                                               <a
                                                 class="tm-media-box tm-media-box-frame"
@@ -174,12 +165,12 @@
                                                   class="tm-media-box-wrap"
                                                 >
                                                   <img
-                                                    src="images/products/1/1-add-4-small.jpg"
-                                                    alt='Apple MacBook Pro 15" Touch Bar MPTU2LL/A 256GB (Silver)'
+                                                    src="{{Voyager::image($produk->gambar2)}}"
+                                                    alt='{{$produk->gambar2}}'
                                                   /></figure
                                               ></a>
                                             </div>
-                                          </li>
+                                          </li> --}}
                                         </ul>
                                         <div>
                                           <a
@@ -218,111 +209,8 @@
                                   style="height: 40px"
                               /></a>
                             </div>
-                            <div class="uk-margin">
-                              <div class="uk-grid-small" uk-grid>
-                                <div class="uk-flex uk-flex-middle">
-                                  <ul
-                                    class="uk-iconnav uk-margin-xsmall-bottom tm-rating"
-                                  >
-                                    <li>
-                                      <span
-                                        class="uk-text-warning"
-                                        uk-icon="star"
-                                      ></span>
-                                    </li>
-                                    <li>
-                                      <span
-                                        class="uk-text-warning"
-                                        uk-icon="star"
-                                      ></span>
-                                    </li>
-                                    <li>
-                                      <span
-                                        class="uk-text-warning"
-                                        uk-icon="star"
-                                      ></span>
-                                    </li>
-                                    <li>
-                                      <span
-                                        class="uk-text-warning"
-                                        uk-icon="star"
-                                      ></span>
-                                    </li>
-                                    <li>
-                                      <span
-                                        class="uk-text-warning"
-                                        uk-icon="star"
-                                      ></span>
-                                    </li>
-                                  </ul>
-                                  <div class="uk-margin-xsmall-left">
-                                    <a
-                                      class="uk-text-meta js-scroll-to-description"
-                                      href="#description"
-                                      onclick="UIkit.switcher('.js-product-switcher').show(3);"
-                                      >(2)</a
-                                    >
-                                  </div>
-                                </div>
-                                <div>
-                                  <span
-                                    class="uk-label uk-label-warning uk-margin-xsmall-right"
-                                    >top selling</span
-                                  ><span
-                                    class="uk-label uk-label-danger uk-margin-xsmall-right"
-                                    >trade-in</span
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                            <div class="uk-margin">
-                              <div class="uk-grid-medium" uk-grid>
-                                <div>
-                                  <div
-                                    class="uk-text-small uk-margin-xsmall-bottom"
-                                  >
-                                    Color
-                                  </div>
-                                  <ul
-                                    class="uk-subnav uk-subnav-pill tm-variations"
-                                    uk-switcher
-                                  >
-                                    <li>
-                                      <a
-                                        class="tm-variation-color"
-                                        uk-tooltip="Space Grey"
-                                        ><div
-                                          style="background-color: #aaaeb1"
-                                        ></div
-                                      ></a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        class="tm-variation-color"
-                                        uk-tooltip="Silver"
-                                        ><div
-                                          style="background-color: #dddfde"
-                                        ></div
-                                      ></a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div>
-                                  <div
-                                    class="uk-text-small uk-margin-xsmall-bottom"
-                                  >
-                                    SSD Storage
-                                  </div>
-                                  <ul
-                                    class="uk-subnav uk-subnav-pill tm-variations"
-                                    uk-switcher
-                                  >
-                                    <li><a>256 GB</a></li>
-                                    <li><a>512 GB</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
+                            
+                           
                             <div class="uk-margin">
                               <div
                                 class="uk-padding-small uk-background-primary-lighten uk-border-rounded"
@@ -332,8 +220,9 @@
                                   uk-grid
                                 >
                                   <div>
-                                    <del class="uk-text-meta">$1899.00</del>
-                                    <div class="tm-product-price">$1599.00</div>
+                                    <div class="uk-text-meta">Harga :</div>
+                                    
+                                    <div class="tm-product-price">@currency($produk->harga)</div>
                                   </div>
                                   <div>
                                     <div class="uk-grid-small" uk-grid>
@@ -360,19 +249,7 @@
                                           add to cart
                                         </button>
                                       </div>
-                                      <div
-                                        class="uk-width-auto uk-width-expand@s uk-flex uk-flex-middle uk-text-meta"
-                                      >
-                                        <a
-                                          class="uk-margin-small-right js-add-to js-add-to-favorites tm-action-button-active js-added-to"
-                                          uk-tooltip="Add to favorites"
-                                          ><span uk-icon="heart"></span></a
-                                        ><a
-                                          class="js-add-to js-add-to-compare tm-action-button-active js-added-to"
-                                          uk-tooltip="Add to compare"
-                                          ><span uk-icon="copy"></span
-                                        ></a>
-                                      </div>
+                                     
                                     </div>
                                   </div>
                                 </div>
@@ -432,19 +309,19 @@
                                 <li>
                                   <span class="uk-text-muted"
                                     >Diagonal display: </span
-                                  ><span>15.4"</span>
+                                  ><span>{{$produk->display}}</span>
                                 </li>
                                 <li>
                                   <span class="uk-text-muted">CPU: </span
-                                  ><span>Intel®&nbsp;Core™ i7</span>
+                                  ><span>{{$produk->spek_processor}}</span>
                                 </li>
                                 <li>
                                   <span class="uk-text-muted">RAM: </span
-                                  ><span>16&nbsp;GB</span>
+                                  ><span>{{$produk->spek_ram}}</span>
                                 </li>
                                 <li>
                                   <span class="uk-text-muted">Video Card: </span
-                                  ><span>AMD Radeon Pro 555</span>
+                                  ><span>{{$produk->spek_vga}}</span>
                                 </li>
                               </ul>
                               <div class="uk-margin-small-top">
@@ -473,10 +350,16 @@
                                 <table
                                   class="uk-table uk-table-divider uk-table-justify uk-table-responsive"
                                 >
+                                <tr>
+                                  <th class="uk-width-medium">Description</th>
+                                  <td class="uk-table-expand">
+                                    {{$produk->deskripsi}}
+                                  </td>
+                                </tr>
                                   <tr>
                                     <th class="uk-width-medium">Processor</th>
                                     <td class="uk-table-expand">
-                                      Intel&nbsp;Core i7&nbsp;Quad-Core
+                                      {{$produk->spek_processor}}
                                     </td>
                                   </tr>
                                   <tr>
@@ -484,29 +367,17 @@
                                       Base Clock Speed
                                     </th>
                                     <td class="uk-table-expand">
-                                      2.8&nbsp;GHz
+                                      {{$produk->spek_base_clock_speed}}
                                     </td>
                                   </tr>
-                                  <tr>
-                                    <th class="uk-width-medium">
-                                      Maximum Boost Speed
-                                    </th>
-                                    <td class="uk-table-expand">
-                                      3.8&nbsp;GHz
-                                    </td>
-                                  </tr>
+                                  
                                   <tr>
                                     <th class="uk-width-medium">
                                       Total Installed Memory
                                     </th>
-                                    <td class="uk-table-expand">16&nbsp;GB</td>
+                                    <td class="uk-table-expand">{{$produk->spek_ram}}</td>
                                   </tr>
-                                  <tr>
-                                    <th class="uk-width-medium">Memory Type</th>
-                                    <td class="uk-table-expand">
-                                      LPDDR3&nbsp;SDRAM
-                                    </td>
-                                  </tr>
+                                  
                                   <tr>
                                     <th class="uk-width-medium">
                                       Memory Speed
@@ -515,30 +386,24 @@
                                       2133&nbsp;MHz
                                     </td>
                                   </tr>
+                                  
+                                  
                                   <tr>
-                                    <th class="uk-width-medium">
-                                      Onboard Memory
-                                    </th>
-                                    <td class="uk-table-expand">16&nbsp;GB</td>
-                                  </tr>
-                                  <tr>
-                                    <th class="uk-width-medium">
-                                      Available Memory Slots
-                                    </th>
-                                    <td class="uk-table-expand">—</td>
-                                  </tr>
-                                  <tr>
-                                    <th class="uk-width-medium">
-                                      Graphics Type
-                                    </th>
-                                    <td class="uk-table-expand">Hybrid</td>
-                                  </tr>
+                                    <th class="uk-width-medium">Display / Monitor</th>
+                                    <td class="uk-table-expand">
+                                      {{$produk->spek_vga}}
+                                    </td>
+                                  </tr>  
                                   <tr>
                                     <th class="uk-width-medium">GPU</th>
                                     <td class="uk-table-expand">
-                                      AMD Radeon&nbsp;Pro 555 with
-                                      2&nbsp;GB&nbsp;GDDR5 VRAM,<br />Intel HD
-                                      Graphics&nbsp;630
+                                      {{$produk->display}}
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th class="uk-width-medium">Storage</th>
+                                    <td class="uk-table-expand">
+                                      {{$produk->spek_storage}}
                                     </td>
                                   </tr>
                                 </table>
@@ -1610,6 +1475,7 @@
                 </div>
               </div>
             </div>
+           
           </div>
         </section>
       

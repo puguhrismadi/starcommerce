@@ -28,7 +28,7 @@ Route::get('/list-product',function (){
 Route::get('/artikel/{slug}',"HomeController@artikel");
 //Route::get('/detail-product/{slug}',"ProdukController@detailProduk");
 
-Route::get('/detail-produk/{slug}',"ProductController@detailProduk");
+Route::get('/detail-produk/{slug}',"ProdukController@detailProduk");
 
 Route::get('/customer/{user}',"CustomerController@detail")->name('customer.detail');
 
