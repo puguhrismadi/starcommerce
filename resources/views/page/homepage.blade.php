@@ -72,7 +72,14 @@
                     @foreach ($laptopk as $produk)
                     <article class="tm-product-card">
                         <div class="tm-product-card-media">
-                            <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="product.html">
+                            <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" 
+                                @foreach ($kategori as $ktg)
+                                @if ($ktg->id == $produk->kategori_produk)
+                                href="{{url("detail-produk/$ktg->slug-$produk->id")}}" 
+                                
+                                @endif
+                            @endforeach
+                                >
                                     <figure class="tm-media-box-wrap"><img src="{{Voyager::image($produk->gambar1)}}"
                                             alt="{{$produk->gambar1}}" /></figure>
                                 </a></div>
@@ -80,9 +87,24 @@
                      
                         <div class="tm-product-card-body">
                             <div class="tm-product-card-info">
-                                <div class="uk-text-meta uk-margin-xsmall-bottom">Laptop</div>
+                                <div class="uk-text-meta uk-margin-xsmall-bottom">
+                                    @foreach ($kategori as $ktg)
+                                        @if ($ktg->id == $produk->kategori_produk)
+                                        {{$ktg->nama}}
+                                        @endif
+                                    @endforeach
+                                    
+                                </div>
                                 <h3 class="tm-product-card-title"><a class="uk-link-heading"
-                                        href="product.html">{{$produk->nama}}</a></h3>
+                                    @foreach ($kategori as $ktg)
+                                        @if ($ktg->id == $produk->kategori_produk)
+                                        href="{{url("detail-produk/$ktg->slug-$produk->id")}}" 
+                                        
+                                        @endif
+                                    @endforeach
+                                        
+                                        
+                                        >{{$produk->nama}}</a></h3>
                                 <ul class="uk-list uk-text-small tm-product-card-properties">
                                     <li><span class="uk-text-muted">Diagonal display: </span><span>13.9"</span>
                                     </li>

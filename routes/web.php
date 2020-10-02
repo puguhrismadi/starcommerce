@@ -26,9 +26,10 @@ Route::get('/list-product',function (){
     return view('product.list_product');
 });
 Route::get('/artikel/{slug}',"HomeController@artikel");
-Route::get('/detail-product',function (){
-    return view('product.detail_product');
-});
+//Route::get('/detail-product/{slug}',"ProdukController@detailProduk");
+
+Route::get('/detail-produk/{slug}',"ProductController@detailProduk");
+
 Route::get('/customer/{user}',"CustomerController@detail")->name('customer.detail');
 
 Route::get('/customer','CustomerController@index')->name('customer.index');;
