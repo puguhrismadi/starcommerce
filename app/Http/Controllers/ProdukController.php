@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Laptop_komputer;
+use App\Kategoriproduk;
+use App\Brand;
 class ProdukController extends Controller
 {
     public function detailProduk($slug){
@@ -12,6 +14,8 @@ class ProdukController extends Controller
         $url = explode("-",$slug);
         $tabel = $url[0];
         $id = $url[1];
+        $ktg = Kategoriproduk::all();
+        $brand = Brand::all();
         if($tabel=='laptop'){
             $produk=Laptop_komputer::find($id);
            // $produk=Laptop_komputer::where('brand',$brand)->get();
@@ -19,7 +23,7 @@ class ProdukController extends Controller
         }else if($tabel=='komputer') {
             $produk=Laptop_komputer::find($id);
         }
-        return view('product.detail_product',['produk'=>$produk]);
+        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand]);
     }
 
 }

@@ -93,9 +93,9 @@
                                 <div class="uk-width-1-2 uk-visible@s">
                                   <div uk-slider="finite: true">
                                     <div class="uk-position-relative">
-                                      <div class="uk-slider-container">
+                                      <div class="uk-slider-container ">
                                         <ul
-                                          class="tm-slider-items uk-slider-items uk-child-width-1-4 uk-grid uk-grid-small"
+                                          class="tm-slider-items uk-slider-items uk-child-width-1-3 uk-grid uk-grid-small "
                                         >
                                           <li uk-slideshow-item="0">
                                             <div class="tm-ratio tm-ratio-1-1">
@@ -141,7 +141,7 @@
                                               ></a>
                                             </div>
                                           </li>
-                                          <li uk-slideshow-item="3">
+                                          {{-- <li uk-slideshow-item="3">
                                             <div class="tm-ratio tm-ratio-1-1">
                                               <a
                                                 class="tm-media-box tm-media-box-frame"
@@ -155,7 +155,7 @@
                                                   /></figure
                                               ></a>
                                             </div>
-                                          </li>
+                                          </li> --}}
                                           {{-- <li uk-slideshow-item="4">
                                             <div class="tm-ratio tm-ratio-1-1">
                                               <a
@@ -172,6 +172,7 @@
                                             </div>
                                           </li> --}}
                                         </ul>
+                                        <br>
                                         <div>
                                           <a
                                             class="uk-position-center-left-out uk-position-small"
@@ -200,14 +201,24 @@
                         <div
                           class="uk-width-1-1 uk-width-1-3@m tm-product-info"
                         >
+                       
+                            
+                       
                           <div class="uk-card-body">
                             <div>
-                              <a href="#" title="Apple"
+                              @foreach ($brand as $brand)
+                             
+                              @if ($produk->brand_produk == $brand->id)
+                              <a href="#" title="{{$brand->nama}}"
                                 ><img
-                                  src="images/brands/apple.svg"
-                                  alt="Apple"
+                                  src="{{Voyager::image($brand->image_brand)}}"
+                                  alt="{{$brand->nama}}"
                                   style="height: 40px"
                               /></a>
+
+                              @endif
+                                   
+                              @endforeach
                             </div>
                             
                            
