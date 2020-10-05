@@ -74,7 +74,7 @@
                         <div class="tm-product-card-media">
                             <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" 
                                 @foreach ($kategori as $ktg)
-                                @if ($ktg->id == $produk->kategori_produk)
+                                @if ($ktg->id == $produk->kategoriproduks_id)
                                 href="{{url("detail-produk/$ktg->slug-$produk->id")}}" 
                                 
                                 @endif
@@ -89,7 +89,7 @@
                             <div class="tm-product-card-info">
                                 <div class="uk-text-meta uk-margin-xsmall-bottom">
                                     @foreach ($kategori as $ktg)
-                                        @if ($ktg->id == $produk->kategori_produk)
+                                        @if ($ktg->id == $produk->kategoriproduks_id)
                                         {{$ktg->nama}}
                                         @endif
                                     @endforeach
@@ -97,7 +97,7 @@
                                 </div>
                                 <h3 class="tm-product-card-title"><a class="uk-link-heading"
                                     @foreach ($kategori as $ktg)
-                                        @if ($ktg->id == $produk->kategori_produk)
+                                        @if ($ktg->id == $produk->kategoriproduks_id)
                                         href="{{url("detail-produk/$ktg->slug-$produk->id")}}" 
                                         
                                         @endif

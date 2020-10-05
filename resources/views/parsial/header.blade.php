@@ -420,7 +420,9 @@
                     uk-dropdown="pos: bottom-right; offset: -10; delay-hide: 200;"
                     style="min-width: 150px; left: 1055px; top: 50px; animation-duration: 200ms;">
                     <ul class="uk-nav uk-dropdown-nav">
-                        <li>   {{ Auth::user()->name }}</li>
+                         @if (isset(Auth::user()->role))
+                         <li> {{ Auth::user()->name }}</li>
+                        @endif 
                         <li><a href="account.html">Pesanan
                                 <span>(2)</span></a></li>
                         <li><a href="favorites.html">Favorites

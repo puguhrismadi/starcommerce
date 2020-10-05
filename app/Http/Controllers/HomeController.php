@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Kategoriproduk;
 use App\Laptop_komputer;
+use Illuminate\Support\Facades\Blade;
 class HomeController extends Controller
 {
     /**

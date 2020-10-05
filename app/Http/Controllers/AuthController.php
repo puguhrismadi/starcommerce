@@ -90,7 +90,7 @@ class AuthController extends Controller
             }
         }
         else{
-            return  "Salah Passwor Email";
+            return  "Salah Password Email";
             //return redirect('/login')->with('alert','Password atau Email, Salah!');
         }
     }

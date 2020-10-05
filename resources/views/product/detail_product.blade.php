@@ -208,7 +208,7 @@
                             <div>
                               @foreach ($brand as $brand)
                              
-                              @if ($produk->brand_produk == $brand->id)
+                              @if ($produk->brands_id == $brand->id)
                               <a href="#" title="{{$brand->nama}}"
                                 ><img
                                   src="{{Voyager::image($brand->image_brand)}}"
@@ -1490,7 +1490,7 @@
           </div>
         </section>
       
-      
+      @dump($related)
 
 
 
