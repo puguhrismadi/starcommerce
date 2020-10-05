@@ -15,6 +15,7 @@ class ProdukController extends Controller
         $tabel = $url[0]; //1
         $id = $url[1];
         $ktg = Kategoriproduk::all();
+        $kategori = Kategoriproduk::all();
         $brand = Brand::all();
         if($tabel=='laptop'){
             $relatedprodukid='';
@@ -30,7 +31,7 @@ class ProdukController extends Controller
         }else if($tabel=='komputer') {
             $produk=Laptop_komputer::find($id);
         }
-        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related]);
+        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori]);
     }
 
 }
