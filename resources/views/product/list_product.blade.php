@@ -1,6 +1,21 @@
 @extends('index')
 @section('title','Laptop')
 @section('content')
+<style>
+#pagebar  ul > li {
+    display: inline;
+    font-size: 14pt;
+    padding: 6pt;
+
+}
+.page-item {
+    color: blueviolet;
+
+}
+.page-link {
+    color: #999;
+}
+</style>
     <section class="uk-section uk-section-small">
         <div class="uk-container">
             <div class="uk-grid-medium uk-child-width-1-1" uk-grid>
@@ -263,26 +278,13 @@
                                 <div class="row">
                                   <br>
                                 </div>
-                                <div >
-                                    <ul class="uk-pagination uk-flex-center">
+                                <div id="pagebar" class="uk-pagination uk-flex-center" >
+                                   
                                         {{$produk->links('pagination::bootstrap-4')}}
-                                    </ul>
+                                  
                                     
                                 </div>
-                                <div>
-                                    <ul class="uk-pagination uk-flex-center">
-                                        <li class="uk-active"><span>1</span></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li class="uk-disabled"><span>…</span></li>
-                                        <li><a href="#">20</a></li>
-                                        <li>
-                                            <a href="#"><span uk-pagination-next></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
