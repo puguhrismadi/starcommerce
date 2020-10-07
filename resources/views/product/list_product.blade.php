@@ -189,15 +189,15 @@
                                             <div>
                                                 <div class="uk-grid-collapse uk-child-width-1-3 tm-products-grid js-products-grid"
                                                     uk-grid>
-                                                    @foreach ($produk as $produk)
+                                                    @foreach ($produk as $prd)
                                                     
                                                     <article class="tm-product-card">
                                                         <div class="tm-product-card-media">
                                                             <div class="tm-ratio tm-ratio-4-3">
                                                                 <a class="tm-media-box" href="produk">
                                                                     <figure class="tm-media-box-wrap">
-                                                                        <img src="{{Voyager::image("$produk->gambar1")}}"
-                                                                            alt="{{$produk->nama}}" />
+                                                                        <img src="{{Voyager::image("$prd->gambar1")}}"
+                                                                            alt="{{$prd->nama}}" />
                                                                     </figure>
                                                                 </a>
                                                             </div>
@@ -209,7 +209,7 @@
                                                                 </div>
                                                                 <h3 class="tm-product-card-title">
                                                                     <a class="uk-link-heading"
-                                                                        href="produk">{{$produk->nama}}</a>
+                                                                        href="produk">{{$prd->nama}}</a>
                                                                 </h3>
                                                                 <ul
                                                                     class="uk-list uk-text-small tm-product-card-properties">
@@ -234,7 +234,7 @@
                                                             <div class="tm-product-card-shop">
                                                                 <div class="tm-product-card-prices">
                                                                     <div class="tm-product-card-price">
-                                                                        @currency($produk->harga)
+                                                                        @currency($prd->harga)
                                                                     </div>
                                                                 </div>
                                                                 <div class="tm-product-card-add">
@@ -262,6 +262,12 @@
                                 </div>
                                 <div class="row">
                                   <br>
+                                </div>
+                                <div >
+                                    <ul class="uk-pagination uk-flex-center">
+                                        {{$produk->links('pagination::bootstrap-4')}}
+                                    </ul>
+                                    
                                 </div>
                                 <div>
                                     <ul class="uk-pagination uk-flex-center">

@@ -16,7 +16,7 @@ class ProdukController extends Controller
         $ktg = Kategoriproduk::where('slug',$slug)->get();
         foreach ($ktg as $value) {
             $idktg=$value->id;         
-            $data=$model::where('kategoriproduks_id',$idktg)->get();                
+            $data=$model::where('kategoriproduks_id',$idktg)->paginate(9);                
         }
         //dd($data);
         
