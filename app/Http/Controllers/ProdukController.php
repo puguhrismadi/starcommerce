@@ -33,5 +33,10 @@ class ProdukController extends Controller
         }
         return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori]);
     }
+    public function listProduk($kategori=null){
+        $ktg = Kategoriproduk::all();
+        $kategori = Kategoriproduk::find($kategori);
+        return view('product.list_product',['ktg'=>$ktg]);
+    }
 
 }

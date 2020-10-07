@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="uk-margin uk-text-center"><a class="uk-link-muted uk-text-uppercase tm-link-to-all"
-                    href="subcategory.html"><span>shop all</span><span
+                    href="{{url('/list-product')}}"><span>shop all</span><span
                         uk-icon="icon: chevron-right; ratio: .75;"></span></a></div>
         </div>
     </section>

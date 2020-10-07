@@ -19,6 +19,8 @@
                     <div class="uk-grid-medium" uk-grid>
                         <aside class="uk-width-1-4 tm-aside-column tm-filters" id="filters"
                             uk-offcanvas="overlay: true; container: false;">
+                            
+
                             <div class="uk-offcanvas-bar uk-padding-remove">
                                 <div class="uk-card uk-card-default uk-card-small uk-flex uk-flex-column uk-height-1-1">
                                     <header class="uk-card-header uk-flex uk-flex-middle">
@@ -32,20 +34,18 @@
                                     <div class="uk-margin-remove uk-flex-1 uk-overflow-auto"
                                         uk-accordion="multiple: true; targets: &gt; .js-accordion-section"
                                         style="flex-basis: auto">
-                                        {{-- <section class="uk-card-small uk-card-body">
+                                         <section class="uk-card-small uk-card-body">
                                             <h4 class="uk-margin-small-bottom">Categories</h4>
+
                                             <ul class="uk-nav uk-nav-default">
-                                                <li><a href="subcategory.html">Laptops</a></li>
-                                                <li><a href="subcategory.html">Tablets</a></li>
-                                                <li>
-                                                    <a href="subcategory.html">Peripherals</a>
-                                                </li>
-                                                <li><a href="subcategory.html">Keyboards</a></li>
-                                                <li>
-                                                    <a href="subcategory.html">Accessories</a>
-                                                </li>
+                                                @foreach ($ktg as $side)
+                                                
+                                                <li><a href="{{url("$side->slug")}}">{{$side->nama}}</a></li>
+                                                    
+                                                @endforeach
+
                                             </ul>
-                                        </section> --}}
+                                        </section> 
                                         <section class="uk-card-body uk-open js-accordion-section">
                                             <h4 class="uk-accordion-title uk-margin-remove">
                                                 Prices
