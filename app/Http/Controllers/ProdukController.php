@@ -32,9 +32,9 @@ class ProdukController extends Controller
         $id = $url[1];
         $ktg = Kategoriproduk::all();
         $kategori = Kategoriproduk::all();
-        
+        $relatedprodukid='';
         if($tabel=='laptop'){
-            $relatedprodukid='';
+            
             $produk=Laptop_komputer::find($id);
             $getID =Laptop_komputer::where('id',$id)->get();
             foreach ($getID as $ktg) {
@@ -46,7 +46,20 @@ class ProdukController extends Controller
            // fungsi related produk untuk query apabila kategori slug nya = laptop maka related produk find only laptop take 6
         }else if($tabel=='komputer') {
             $produk=Laptop_komputer::find($id);
+            $getID =Laptop_komputer::where('id',$id)->get();
+            foreach ($getID as $ktg) {
+                $relatedprodukid=$ktg->kategoriproduks_id;
+            }
+            $related=Laptop_komputer::where('kategoriproduks_id',$relatedprodukid)->get()->take(6);
+        }else{
+            $produk=Hardwaresoftware::find($id);
+            $getID =Hardwaresoftware::where('id',$id)->get();
+            foreach ($getID as $ktg) {
+                $relatedprodukid=$ktg->kategoriproduks_id;
+            }
+            $related=Hardwaresoftware::where('kategoriproduks_id',$relatedprodukid)->get()->take(6);
         }
+
         return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori]);
     }
     public function listProduk($slug=null){

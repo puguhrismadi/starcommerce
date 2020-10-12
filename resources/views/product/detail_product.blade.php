@@ -335,9 +335,10 @@
                                 <tr>
                                   <th class="uk-width-medium">Description</th>
                                   <td class="uk-table-expand">
-                                    {{$produk->deskripsi}}
+                                    {!!$produk->deskripsi!!}
                                   </td>
                                 </tr>
+
                                   <tr>
                                     <th class="uk-width-medium">Processor</th>
                                     <td class="uk-table-expand">
@@ -368,8 +369,8 @@
                                       2133&nbsp;MHz
                                     </td>
                                   </tr>
-                                  
-                                  
+                                  {{-- @if ($slug!='accesories') --}}
+                                 
                                   <tr>
                                     <th class="uk-width-medium">Display / Monitor</th>
                                     <td class="uk-table-expand">
@@ -388,6 +389,10 @@
                                       {{$produk->spek_storage}}
                                     </td>
                                   </tr>
+                                       
+                                  {{-- @endif
+                                   --}}
+
                                 </table>
                                 
                               </section>
