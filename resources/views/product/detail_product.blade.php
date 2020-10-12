@@ -284,6 +284,7 @@
                                 </div>
                               </div>
                             </div>
+                            @if ($detailflag!=1)
                             <div class="uk-margin">
                               <ul
                                 class="uk-list uk-text-small uk-margin-remove"
@@ -320,6 +321,7 @@
                                 ></a>
                               </div>
                             </div>
+                            @endif
                           </div>
                         </div>
                         <div
@@ -338,7 +340,7 @@
                                     {!!$produk->deskripsi!!}
                                   </td>
                                 </tr>
-
+                                @if ($detailflag!=1)
                                   <tr>
                                     <th class="uk-width-medium">Processor</th>
                                     <td class="uk-table-expand">
@@ -369,7 +371,7 @@
                                       2133&nbsp;MHz
                                     </td>
                                   </tr>
-                                  {{-- @if ($slug!='accesories') --}}
+                                 
                                  
                                   <tr>
                                     <th class="uk-width-medium">Display / Monitor</th>
@@ -390,8 +392,8 @@
                                     </td>
                                   </tr>
                                        
-                                  {{-- @endif
-                                   --}}
+                                  @endif
+                                  
 
                                 </table>
                                 

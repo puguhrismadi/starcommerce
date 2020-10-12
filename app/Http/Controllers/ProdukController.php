@@ -33,6 +33,7 @@ class ProdukController extends Controller
         $ktg = Kategoriproduk::all();
         $kategori = Kategoriproduk::all();
         $relatedprodukid='';
+        $detailflag=0;
         if($tabel=='laptop'){
             
             $produk=Laptop_komputer::find($id);
@@ -54,13 +55,14 @@ class ProdukController extends Controller
         }else{
             $produk=Hardwaresoftware::find($id);
             $getID =Hardwaresoftware::where('id',$id)->get();
+            $detailflag=1;
             foreach ($getID as $ktg) {
                 $relatedprodukid=$ktg->kategoriproduks_id;
             }
             $related=Hardwaresoftware::where('kategoriproduks_id',$relatedprodukid)->get()->take(6);
         }
 
-        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori]);
+        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori,'detailflag'=>$detailflag]);
     }
     public function listProduk($slug=null){
        
