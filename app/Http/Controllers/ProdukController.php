@@ -50,17 +50,47 @@ class ProdukController extends Controller
         return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori]);
     }
     public function listProduk($slug=null){
+       
+
         $ktg = Kategoriproduk::all();
+        if($slug==null){
+            return redirect()->route('produk', ['kategori' => 'laptop']);
+        }
         $kategori = Kategoriproduk::where('slug',$slug)->get();
-        if($slug=='hardware'){
+        
+        if($slug=='accesories'){
             $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+            $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',5)->count();
+        }elseif($slug=='spare-part'){
+            $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+            $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',4)->count();
+        }elseif($slug=='software'){
+            $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+            $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',6)->count();
+        }elseif($slug=='hardware'){
+            $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+            $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',3)->count();
         }else{
-            //default kategori produk laptop 
-            $produk = $this->slugGetProduk('laptop',"App\Laptop_komputer",'laptop_komputers');
+            if($slug=="laptop"){
+                 //default kategori produk laptop 
+                $produk = $this->slugGetProduk('laptop',"App\Laptop_komputer",'laptop_komputers');
+                 //mencari laptop dari tabel laptop komputer
+                $ktgterpilih = Laptop_komputer::where('kategoriproduks_id',1)->count();
+            }elseif($slug=="komputer"){
+                  //default kategori produk komputer rakitan 
+                  $produk = $this->slugGetProduk('komputer',"App\Laptop_komputer",'laptop_komputers');
+                  $ktgterpilih = Laptop_komputer::where('kategoriproduks_id',2)->count();
+            }else{
+                //default kategori produk laptop 
+                $produk = $this->slugGetProduk('laptop',"App\Laptop_komputer",'laptop_komputers');
+                 //mencari laptop dari tabel laptop komputer
+                $ktgterpilih = Laptop_komputer::where('kategoriproduks_id',1)->count();
+            }
+           
         }
         
         //return $produk;
-       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk]);
+       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih]);
     }
 
 }

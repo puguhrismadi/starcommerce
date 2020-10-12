@@ -32,7 +32,7 @@
                         {{$kategori->nama}}
                     </h1>
                     @endforeach
-                    <div class="uk-text-meta uk-margin-xsmall-top">367 items</div>
+                    <div class="uk-text-meta uk-margin-xsmall-top">{{$ktgterpilih}} items</div>
                 </div>
                 <div>
                     <div class="uk-grid-medium" uk-grid>

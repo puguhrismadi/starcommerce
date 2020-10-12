@@ -22,7 +22,7 @@ Route::get('/blog', function () {
 Route::get('/catalog',function (){
     return view('page.catalog');
 });
-Route::get('/list-product/{kategori}','ProdukController@listProduk');
+Route::get('/list-product/{kategori}','ProdukController@listProduk')->name('produk');
 Route::get('/list-product','ProdukController@listProduk');
 
 Route::get('/artikel/{slug}',"HomeController@artikel");
