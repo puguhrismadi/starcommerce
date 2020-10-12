@@ -74,13 +74,13 @@
                                                     <div>
                                                         <div class="uk-inline">
                                                             <span class="uk-form-icon uk-text-xsmall">from</span><input
-                                                                class="uk-input" type="text" placeholder="$59" />
+                                                                class="uk-input" type="text" placeholder="Rp 1.000.0000" />
                                                         </div>
                                                     </div>
                                                     <div>
                                                         <div class="uk-inline">
                                                             <span class="uk-form-icon uk-text-xsmall">to</span><input
-                                                                class="uk-input" type="text" placeholder="$6559" />
+                                                                class="uk-input" type="text" placeholder="Rp 5.000.000" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -209,7 +209,7 @@
                                                     <article class="tm-product-card">
                                                         <div class="tm-product-card-media">
                                                             <div class="tm-ratio tm-ratio-4-3">
-                                                                <a class="tm-media-box" href="produk">
+                                                                <a class="tm-media-box" href="{{url("detail-produk/$slug-$prd->id")}}">
                                                                     <figure class="tm-media-box-wrap">
                                                                         <img src="{{Voyager::image("$prd->gambar1")}}"
                                                                             alt="{{$prd->nama}}" />
