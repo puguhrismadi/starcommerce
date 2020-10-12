@@ -224,7 +224,7 @@
                                                                 </div>
                                                                 <h3 class="tm-product-card-title">
                                                                     <a class="uk-link-heading"
-                                                                        href="produk">{{$prd->nama}}</a>
+                                                                    href="{{url("detail-produk/$slug-$prd->id")}}" >{{$prd->nama}}</a>
                                                                 </h3>
                                                                 <ul
                                                                     class="uk-list uk-text-small tm-product-card-properties">

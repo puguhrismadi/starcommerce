@@ -90,7 +90,7 @@ class ProdukController extends Controller
         }
         
         //return $produk;
-       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih]);
+       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih,'slug'=>$slug]);
     }
 
 }
