@@ -65,8 +65,8 @@ class ProdukController extends Controller
         return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori,'detailflag'=>$detailflag]);
     }
     public function listProduk($slug=null){
-       
-
+      //  $brandlaptopkomputer=App\Brand::withCount(['laptop_komputer'])->get();
+        $brand = Brand::all();
         $ktg = Kategoriproduk::all();
         if($slug==null){
             return redirect()->route('produk', ['kategori' => 'laptop']);
@@ -105,7 +105,7 @@ class ProdukController extends Controller
         }
         
         //return $produk;
-       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih,'slug'=>$slug]);
+       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih,'slug'=>$slug,'brand'=>$brand]);
     }
 
 }

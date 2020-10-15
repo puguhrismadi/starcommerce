@@ -15,6 +15,8 @@
 .page-link {
     color: #999;
 }
+
+
 </style>
     <section class="uk-section uk-section-small">
         <div class="uk-container">
@@ -92,55 +94,19 @@
                                             </h4>
                                             <div class="uk-accordion-content">
                                                 <ul class="uk-list tm-scrollbox">
+                                                    @foreach ($brand as $brand)
+                                                        
+                                                   
                                                     <li>
-                                                        <input class="tm-checkbox" id="brand-1" name="brand" value="1"
-                                                            type="checkbox" /><label for="brand-1"><span>Acer
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">177</span></span></label>
+                                                        <input class="checkbox" id="brand-{{$brand->id}}" name="brand[{{$brand->id}}]" value="{{$brand->id}}"
+                                                            type="checkbox" /><label for="brand-1"><span>{{$brand->nama}} 
+                                                               <span
+                                                                    class="uk-text-meta uk-text-xsmall">177</span></span></label> 
                                                     </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-2" name="brand" value="2"
-                                                            type="checkbox" /><label for="brand-2"><span>Apple
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">18</span></span></label>
-                                                    </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-3" name="brand" value="3"
-                                                            type="checkbox" /><label for="brand-3"><span>ASUS
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">150</span></span></label>
-                                                    </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-4" name="brand" value="4"
-                                                            type="checkbox" /><label for="brand-4"><span>Dell
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">170</span></span></label>
-                                                    </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-5" name="brand" value="5"
-                                                            type="checkbox" /><label for="brand-5"><span>HP
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">498</span></span></label>
-                                                    </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-6" name="brand" value="6"
-                                                            type="checkbox" /><label for="brand-6"><span>MSI
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">54</span></span></label>
-                                                    </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-7" name="brand" value="7"
-                                                            type="checkbox" /><label for="brand-7"><span>Samsung
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">1</span></span></label>
-                                                    </li>
-                                                    <li>
-                                                        <input class="tm-checkbox" id="brand-8" name="brand" value="8"
-                                                            type="checkbox" /><label for="brand-8"><span>Sony
-                                                                <span
-                                                                    class="uk-text-meta uk-text-xsmall">1</span></span></label>
-                                                    </li>
+                                                    @endforeach
                                                 </ul>
+
+                                               
                                             </div>
                                         </section>
                                         <div class="uk-card-body">
