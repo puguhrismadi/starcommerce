@@ -41,7 +41,7 @@
 
                 <div>
                     <a class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large"
-                        href="subcategory.html">
+                        href="{{url("list-product/".$ktg->slug)}}">
                         <div class="tm-ratio tm-ratio-4-3">
                             <div class="tm-media-box">
                                 <figure class="tm-media-box-wrap"><img class="item-brand"
@@ -148,90 +148,17 @@
                         <div class="uk-visible@m"><a href="#" uk-slidenav-previous uk-slider-item="previous"></a></div>
                         <div class="uk-width-expand uk-slider-container">
                             <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-6@s uk-grid uk-grid-large">
+                               @foreach ($brand2 as $brand)
+                                   
+                               
                                 <li>
                                     <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Apple">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/apple.svg"
-                                                    alt="Apple"></figure>
+                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="{{$brand->nama}}">
+                                            <figure class="tm-media-box-wrap"><img src="{{Voyager::image($brand->image_brand)}}"
+                                                    alt="{{$brand->nama}}"></figure>
                                         </a></div>
                                 </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Samsung">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/samsung.svg"
-                                                    alt="Samsung"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Sony">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/sony.svg"
-                                                    alt="Sony"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Microsoft">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/microsoft.svg"
-                                                    alt="Microsoft"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Intel">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/intel.svg"
-                                                    alt="Intel"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="HP">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/hp.svg" alt="HP">
-                                            </figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="LG">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/lg.svg" alt="LG">
-                                            </figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Lenovo">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/lenovo.svg"
-                                                    alt="Lenovo"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="ASUS">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/asus.svg"
-                                                    alt="ASUS"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Acer">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/acer.svg"
-                                                    alt="Acer"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Dell">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/dell.svg"
-                                                    alt="Dell"></figure>
-                                        </a></div>
-                                </li>
-                                <li>
-                                    <div class="tm-ratio tm-ratio-16-9"><a
-                                            class="uk-link-muted tm-media-box tm-grayscale" href="#" title="Canon">
-                                            <figure class="tm-media-box-wrap"><img src="images/brands/canon.svg"
-                                                    alt="Canon"></figure>
-                                        </a></div>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                         <div class="uk-visible@m"><a href="#" uk-slider-item="next" uk-slidenav-next></a></div>

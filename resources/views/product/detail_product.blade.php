@@ -179,7 +179,7 @@
                             <div>
                               @foreach ($brand as $brand)
                              
-                              @if ($produk->brands_id == $brand->id)
+                              @if ($produk->brand_id == $brand->id)
                               <a href="#" title="{{$brand->nama}}"
                                 ><img
                                   src="{{Voyager::image($brand->image_brand)}}"
