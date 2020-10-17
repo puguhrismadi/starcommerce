@@ -1592,11 +1592,11 @@ select.uk-form-width-xsmall {
 }
 
 .uk-section-primary {
-    background: #1e87f0
+    background: #914f07
 }
 
 .uk-section-secondary {
-    background: #222
+    background:#290001
 }
 
 .uk-container {
@@ -7298,13 +7298,17 @@ iframe.uk-cover {
 }
 
 .tm-toolbar-container:not(.uk-navbar-transparent) {
-    background: #0e6dcd
+    /* header custom color */
+    background: #f48c1c
 }
 
 .tm-toolbar-container .uk-navbar-item {
-    color: #999
+    /* header custom color */
+    color: whitesmoke
 }
-
+.tm-product-card-add-button-icon uk-icon{
+    background-color: #f48c1c
+}
 .tm-toolbar-container .uk-navbar-nav>li>a {
     text-transform: none;
     height: 40px
