@@ -145,11 +145,11 @@
                         <rect y="9" width="20" height="2"></rect>
                         <rect y="3" width="20" height="2"></rect>
                         <rect y="15" width="20" height="2"></rect>
-                    </svg></button><a class="uk-navbar-item uk-logo" href="index.html"><img src="images/logo.svg"
+                    </svg></button><a class="uk-navbar-item uk-logo" href="{{url('/')}}"><img src="{{Voyager::image(setting('site.logo'))}}"
                         alt="Logo" width="90" height="32"></a>
                 <nav class="uk-visible@m">
                     <ul class="uk-navbar-nav">
-                        <li><a href="catalog.html" class="" aria-expanded="false">Catalog<span
+                        <li><a href="{{url('/list-product')}}" class="" aria-expanded="false">Catalog<span
                                     class="uk-margin-xsmall-left uk-icon" uk-icon="icon: chevron-down; ratio: .75;"></span></a>
                             <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove-vertical uk-drop uk-drop-boundary uk-drop-bottom-center uk-animation-fade uk-animation-enter"
                                 uk-drop="pos: bottom-justify;delay-show: 125;delay-hide: 50;duration: 75;boundary: .tm-navbar-container;boundary-align: true;pos: bottom-justify;flip: x"
@@ -251,102 +251,19 @@
                                 style="width: 1280px; left: 0.000334351px; top: 61px; animation-duration: 75ms;">
                                 <div class="uk-container uk-container-small uk-margin-top uk-margin-bottom">
                                     <ul class="uk-grid-small uk-child-width-1-6 uk-grid" uk-grid="">
-                                        <li class="uk-first-column">
+                                     {{-- {{ dd($brand)}} --}}
+                                        @foreach ($brand1 as $brd)
+                                            
+                                      
+                                        <li class="">
                                             <div class="tm-ratio tm-ratio-4-3"><a
                                                     class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Apple">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/apple.svg"
-                                                            alt="Apple"></figure>
+                                                    href="#" title="{{$brd->nama}}">
+                                                    <figure class="tm-media-box-wrap"><img src="{{Voyager::image($brd->image_brand)}}"
+                                                            alt="{{$brd->nama}}"></figure>
                                                 </a></div>
                                         </li>
-                                        <li>
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Samsung">
-                                                    <figure class="tm-media-box-wrap"><img
-                                                            src="images/brands/samsung.svg" alt="Samsung"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li>
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Sony">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/sony.svg"
-                                                            alt="Sony"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li>
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Microsoft">
-                                                    <figure class="tm-media-box-wrap"><img
-                                                            src="images/brands/microsoft.svg" alt="Microsoft"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li>
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Intel">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/intel.svg"
-                                                            alt="Intel"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li>
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="HP">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/hp.svg"
-                                                            alt="HP"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li class="uk-grid-margin uk-first-column">
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="LG">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/lg.svg"
-                                                            alt="LG"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li class="uk-grid-margin">
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Lenovo">
-                                                    <figure class="tm-media-box-wrap"><img
-                                                            src="images/brands/lenovo.svg" alt="Lenovo"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li class="uk-grid-margin">
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="ASUS">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/asus.svg"
-                                                            alt="ASUS"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li class="uk-grid-margin">
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Acer">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/acer.svg"
-                                                            alt="Acer"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li class="uk-grid-margin">
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Dell">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/dell.svg"
-                                                            alt="Dell"></figure>
-                                                </a></div>
-                                        </li>
-                                        <li class="uk-grid-margin">
-                                            <div class="tm-ratio tm-ratio-4-3"><a
-                                                    class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
-                                                    href="#" title="Canon">
-                                                    <figure class="tm-media-box-wrap"><img src="images/brands/canon.svg"
-                                                            alt="Canon"></figure>
-                                                </a></div>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                     <div class="uk-text-center uk-margin"><a
                                             class="uk-link-muted uk-text-uppercase tm-link-to-all"
@@ -412,17 +329,18 @@
                                     uk-close=""></a></div>
                         </div>
                     </div>
-                </div><a class="uk-navbar-item uk-link-muted uk-visible@m tm-navbar-button" href="compare.html"><span
-                        uk-icon="copy" class="uk-icon"></span><span class="uk-badge">3</span></a><a
+                </div>
+                @if (isset(Auth::user()->role))
+                <a
                     class="uk-navbar-item uk-link-muted tm-navbar-button uk-icon" href="account.html" uk-icon="user"
                     aria-expanded="false"></a>
                 <div class="uk-padding-small uk-margin-remove uk-dropdown uk-animation-fade uk-animation-enter"
                     uk-dropdown="pos: bottom-right; offset: -10; delay-hide: 200;"
                     style="min-width: 150px; left: 1055px; top: 50px; animation-duration: 200ms;">
                     <ul class="uk-nav uk-dropdown-nav">
-                         @if (isset(Auth::user()->role))
+                         
                          <li> {{ Auth::user()->name }}</li>
-                        @endif 
+                       
                         <li><a href="account.html">Pesanan
                                 <span>(2)</span></a></li>
                         <li><a href="favorites.html">Favorites
@@ -439,9 +357,18 @@
                             @csrf
                            
                         </form></li>
+                        
                     </ul>
                 </div><a class="uk-navbar-item uk-link-muted tm-navbar-button" href="cart.html"
                     uk-toggle="target: #cart-offcanvas" onclick="return false"><span uk-icon="cart" class="uk-icon"></span><span class="uk-badge">2</span></a>
+                    @endif 
+                    <ul class="uk-navbar-nav">
+                    <li><a href="#">Login</a></li>
+                    <a class="uk-navbar-item uk-link-muted tm-navbar-button" href="{{url('/login')}}"
+                    ><span uk-icon="cart" class="uk-icon"></span></a>
+                   </ul>
+
+                 
             </div>
         </div>
     </div>

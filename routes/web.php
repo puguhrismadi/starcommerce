@@ -24,6 +24,8 @@ Route::get('/catalog',function (){
 });
 Route::get('/list-product/{kategori}','ProdukController@listProduk')->name('produk');
 Route::get('/list-product','ProdukController@listProduk');
+Route::post('/list-product','ProdukController@listProdukFilter');
+
 
 Route::get('/artikel/{slug}',"HomeController@artikel");
 //Route::get('/detail-product/{slug}',"ProdukController@detailProduk");
@@ -32,8 +34,11 @@ Route::get('/detail-produk/{slug}',"ProdukController@detailProduk");
 
 Route::get('/customer/{user}',"CustomerController@detail")->name('customer.detail');
 
-Route::get('/customer','CustomerController@index')->name('customer.index');;
+//Route::get('/customer','CustomerController@index')->name('customer.index');;
 Route::get('/account/{user}',"CustomerController@edit")->name('customer.edit');
+
+// new customer dashboard
+Route::get('/customer','CustomerController@index')->name('customer.index');;
 
 //untuk proses edit 
 Route::patch('/customer/{user}','CustomerController@prosesEdit')->name('update.account');
