@@ -6,7 +6,17 @@ use Illuminate\Http\Request;
 use App\User;
 class CustomerController extends Controller
 {
+    var $brand;
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->brand = Brand::all();
+    }
     public function index(){
+       
+        return view('customer.index');
+    }
+    public function indexold(){
         $userlist = User::all();
         return view('admin.list_customer',['user'=>$userlist]);
     }

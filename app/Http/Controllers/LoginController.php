@@ -65,7 +65,7 @@ class LoginController extends Controller
                 // Authentication passed...
                 return redirect()->intended('dashboard');
             }
-            return Redirect::to("/login")->with('Oppes! You have entered invalid credentials');
+            return Redirect::to("/login")->with('Username dan Password yang anda masukkan Tidak tepat');
     }
     public function dashboard(){
         redirect(url('/'));

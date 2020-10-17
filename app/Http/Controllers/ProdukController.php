@@ -9,6 +9,12 @@ use App\Hardwaresoftware;
 use App\Brand;
 class ProdukController extends Controller
 {
+    var $brand;
+    public function __construct()
+    {
+       // $this->middleware('auth');
+        $this->brand = Brand::all();
+    }
     public function slugGetProduk($slug,$model,$tabel){
      
         $idktg='';
@@ -25,7 +31,8 @@ class ProdukController extends Controller
     public function detailProduk($slug){
        //return "Test Produk Detail";
        //contoh laptop-2 , laptop index 0 , 2 itu index 1 dengan metode explode separator -
-        $brand = Brand::all();
+       $brand1 = Brand::all();
+       $brand2 = Brand::all();
 
         $url = explode("-",$slug);
         $tabel = $url[0]; //1
@@ -62,11 +69,12 @@ class ProdukController extends Controller
             $related=Hardwaresoftware::where('kategoriproduks_id',$relatedprodukid)->get()->take(6);
         }
 
-        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$brand,'related'=>$related,'kategori'=>$kategori,'detailflag'=>$detailflag]);
+        return view('product.detail_product',['produk'=>$produk,'ktg'=>$ktg,'brand'=>$this->brand,'related'=>$related,'kategori'=>$kategori,'detailflag'=>$detailflag,'brand1'=>$brand1]);
     }
     public function listProduk($slug=null){
       //  $brandlaptopkomputer=App\Brand::withCount(['laptop_komputer'])->get();
-        $brand = Brand::all();
+      $brand1 = Brand::all();
+      $brand2 = Brand::all();
         $ktg = Kategoriproduk::all();
         if($slug==null){
             return redirect()->route('produk', ['kategori' => 'laptop']);
@@ -105,7 +113,62 @@ class ProdukController extends Controller
         }
         
         //return $produk;
-       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih,'slug'=>$slug,'brand'=>$brand]);
+       return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih,'slug'=>$slug,'brand1'=>$brand1,'brand'=>$this->brand]);
     }
+    public function listProdukFilter(Request $request){
 
+        $data=$request->all();
+        $jml=count($request->brand);
+        $arr=[];
+        for($i=0;$i<$jml;$i++){
+            $data=$request->brand[$i];
+            array_push($arr,$data);
+            
+        }
+       
+
+
+        return $arr;
+        //   $brand = Brand::all();
+        //   $ktg = Kategoriproduk::all();
+        //   if($slug==null){
+        //       return redirect()->route('produk', ['kategori' => 'laptop']);
+        //   }
+        //   $kategori = Kategoriproduk::where('slug',$slug)->get();
+          
+        //   if($slug=='accesories'){
+        //       $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+        //       $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',5)->count();
+        //   }elseif($slug=='spare-part'){
+        //       $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+        //       $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',4)->count();
+        //   }elseif($slug=='software'){
+        //       $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+        //       $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',6)->count();
+        //   }elseif($slug=='hardware'){
+        //       $produk = $this->slugGetProduk($slug,"App\Hardwaresoftware",'hardwaresoftwares');
+        //       $ktgterpilih = Hardwaresoftware::where('kategoriproduks_id',3)->count();
+        //   }else{
+        //       if($slug=="laptop"){
+        //            //default kategori produk laptop 
+        //           $produk = $this->slugGetProduk('laptop',"App\Laptop_komputer",'laptop_komputers');
+        //            //mencari laptop dari tabel laptop komputer
+        //           $ktgterpilih = Laptop_komputer::where('kategoriproduks_id',1)->count();
+        //       }elseif($slug=="komputer"){
+        //             //default kategori produk komputer rakitan 
+        //             $produk = $this->slugGetProduk('komputer',"App\Laptop_komputer",'laptop_komputers');
+        //             $ktgterpilih = Laptop_komputer::where('kategoriproduks_id',2)->count();
+        //       }else{
+        //           //default kategori produk laptop 
+        //           $produk = $this->slugGetProduk('laptop',"App\Laptop_komputer",'laptop_komputers');
+        //            //mencari laptop dari tabel laptop komputer
+        //           $ktgterpilih = Laptop_komputer::where('kategoriproduks_id',1)->count();
+        //       }
+             
+        //   }
+          
+        //   //return $produk;
+        //  return view('product.list_product',['ktg'=>$ktg,'kategori'=>$kategori,'produk'=>$produk,'ktgterpilih'=>$ktgterpilih,'slug'=>$slug,'brand'=>$brand]);
+      }
+  
 }
