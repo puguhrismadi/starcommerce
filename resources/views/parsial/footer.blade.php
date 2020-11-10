@@ -2,7 +2,7 @@
     <section class="uk-section uk-section-secondary uk-section-small uk-light">
         <div class="uk-container">
             <div class="uk-grid-medium uk-child-width-1-1 uk-child-width-1-4@m uk-grid" uk-grid="">
-                <div class="uk-first-column"><a class="uk-logo" href="index.html"><img src="images/logo-inverse.svg"
+                <div class="uk-first-column"><a class="uk-logo" href="index.html"><img src="{{Voyager::image(setting('site.logo_white'))}}"
                             alt="Logo" width="90" height="32"></a>
                     <p class="uk-text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris
                         eros. Nulla quis ante sed tortor efficitur facilisis.</p>
@@ -75,11 +75,7 @@
                 <div class="uk-grid-small uk-flex-1 uk-grid uk-grid-stack" uk-grid="">
                     <div class="uk-width-expand">
                         <div class="uk-h3">Cart</div>
-                    </div><button class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close=""><svg width="14"
-                            height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                            <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
-                            <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
-                        </svg></button>
+                    </div><button class="uk-offcanvas-close uk-close uk-icon" type="button" uk-close=""></button>
                 </div>
             </header>
             <div class="uk-card-body uk-overflow-auto">
@@ -89,7 +85,7 @@
                             <div class="uk-grid-small uk-grid" uk-grid="">
                                 <div class="uk-width-1-4">
                                     <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="product.html">
-                                            <figure class="tm-media-box-wrap"><img src="images/products/1/1-small.jpg"
+                                            <figure class="tm-media-box-wrap"><img src="{{asset('images/products/1/1-small.jpg')}}"
                                                     alt="Apple MacBook Pro 15&quot; Touch Bar MPTU2LL/A 256GB (Silver)">
                                             </figure>
                                         </a></div>
@@ -106,11 +102,7 @@
                                 </div>
                                 <div><a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#"
                                         uk-icon="icon: close; ratio: .75" uk-tooltip="Remove" title=""
-                                        aria-expanded="false"><svg width="15" height="15" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
-                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
-                                        </svg></a></div>
+                                        aria-expanded="false"></a></div>
                             </div>
                         </arttcle>
                     </li>
@@ -119,7 +111,7 @@
                             <div class="uk-grid-small uk-grid" uk-grid="">
                                 <div class="uk-width-1-4">
                                     <div class="tm-ratio tm-ratio-4-3"><a class="tm-media-box" href="product.html">
-                                            <figure class="tm-media-box-wrap"><img src="images/products/2/2-small.jpg"
+                                            <figure class="tm-media-box-wrap"><img src="{{asset('images/products/2/2-small.jpg')}}"
                                                     alt="Apple MacBook 12&quot; MNYN2LL/A 512GB (Rose Gold)"></figure>
                                         </a></div>
                                 </div>
@@ -135,11 +127,7 @@
                                 </div>
                                 <div><a class="uk-icon-link uk-text-danger uk-invisible-hover uk-icon" href="#"
                                         uk-icon="icon: close; ratio: .75" uk-tooltip="Remove" title=""
-                                        aria-expanded="false"><svg width="15" height="15" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,16 L4,4"></path>
-                                            <path fill="none" stroke="#000" stroke-width="1.06" d="M16,4 L4,16"></path>
-                                        </svg></a></div>
+                                        aria-expanded="false"></a></div>
                             </div>
                         </arttcle>
                     </li>

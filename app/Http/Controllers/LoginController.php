@@ -10,11 +10,20 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 class LoginController extends Controller
 {
+    var $brand,$brand1,$brand2;
+    public function __construct()
+    {
+       
+        $this->brand1 = Brand::all();
+        $this->brand2 = Brand::all();
+        $this->brand = Brand::all();
+    }
     public function register(){
         return view('customer.register');
     }
     public function login(){
-        return view('customer.login');
+        return "Test login";
+        //return view('customer.login',['brand'=>$this->brand,'brand1'=>$this->brand1]);
     }
     public function proses_register(Request $request){
        

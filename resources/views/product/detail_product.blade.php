@@ -1,5 +1,5 @@
 @extends('index')
-@section('title','Laptop')
+@section('title',$slug)
 @section('content')
     
         <section class="uk-section uk-section-small">
@@ -10,10 +10,10 @@
             <div class="uk-grid-medium uk-child-width-1-1" uk-grid>
               <div class="uk-text-center">
                 <ul class="uk-breadcrumb uk-flex-center uk-margin-remove">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="{{url('/')}}">Home</a></li>
                   <li><a href="catalog.html">Catalog</a></li>
-                  <li><a href="category.html">Laptops &amp; Tablets</a></li>
-                  <li><a href="subcategory.html">Laptops</a></li>
+                 
+                  <li><a href="subcategory.html">{{$slug}}</a></li>
                   <li>
                     <span>{{$produk->nama}} </span
                     >

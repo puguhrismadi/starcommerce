@@ -160,7 +160,7 @@
                                             <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                     href="category.html"><img
                                                         class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                        src="images/catalog/computers.svg" alt="Laptops &amp; Tablets"
+                                                        src="{{asset('images/catalog/computers.svg')}}" alt="Laptops &amp; Tablets"
                                                         width="80" height="80">
                                                     <div class="uk-text-bolder">Laptops &amp; Tablets</div>
                                                 </a>
@@ -177,7 +177,7 @@
                                             <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                     href="category.html"><img
                                                         class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                        src="images/catalog/phones.svg" alt="Phones &amp; Gadgets"
+                                                        src="{{asset('images/catalog/phones.svg')}}" alt="Phones &amp; Gadgets"
                                                         width="80" height="80">
                                                     <div class="uk-text-bolder">Phones &amp; Gadgets</div>
                                                 </a>
@@ -194,7 +194,7 @@
                                             <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                     href="category.html"><img
                                                         class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                        src="images/catalog/tv.svg" alt="TV &amp; Video" width="80"
+                                                        src="{{asset('images/catalog/tv.svg')}}" alt="TV &amp; Video" width="80"
                                                         height="80">
                                                     <div class="uk-text-bolder">TV &amp; Video</div>
                                                 </a>
@@ -212,7 +212,7 @@
                                             <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                     href="category.html"><img
                                                         class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                        src="images/catalog/games.svg" alt="Games &amp; Entertainment"
+                                                        src="{{ asset('images/catalog/games.svg')}}" alt="Games &amp; Entertainment"
                                                         width="80" height="80">
                                                     <div class="uk-text-bolder">Games &amp; Entertainment</div>
                                                 </a>
@@ -229,7 +229,7 @@
                                             <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                     href="category.html"><img
                                                         class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                        src="images/catalog/photo.svg" alt="Photo" width="80"
+                                                        src="{{ asset('images/catalog/photo.svg')}}" alt="Photo" width="80"
                                                         height="80">
                                                     <div class="uk-text-bolder">Photo</div>
                                                 </a>
@@ -252,7 +252,7 @@
                                 <div class="uk-container uk-container-small uk-margin-top uk-margin-bottom">
                                     <ul class="uk-grid-small uk-child-width-1-6 uk-grid" uk-grid="">
                                      {{-- {{ dd($brand)}} --}}
-                                        @foreach ($brand1 as $brd)
+                                        @foreach ($brand1 ?? '' as $brd)
                                             
                                       
                                         <li class="">
@@ -348,6 +348,7 @@
                         <li><a href="personal.html">Personal</a></li>
                         <li><a href="settings.html">Settings</a></li>
                         <li class="uk-nav-divider"></li>
+
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();">
@@ -363,7 +364,9 @@
                     uk-toggle="target: #cart-offcanvas" onclick="return false"><span uk-icon="cart" class="uk-icon"></span><span class="uk-badge">2</span></a>
                     @endif 
                     <ul class="uk-navbar-nav">
+                   
                     <li><a href="#">Login</a></li>
+
                     <a class="uk-navbar-item uk-link-muted tm-navbar-button" href="{{url('/login')}}"
                     ><span uk-icon="cart" class="uk-icon"></span></a>
                    </ul>

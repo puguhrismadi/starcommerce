@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Brand;
 class CustomerController extends Controller
 {
-    var $brand;
+    var $brand,$brand1,$brand2;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->brand1 = Brand::all();
+        $this->brand2 = Brand::all();
         $this->brand = Brand::all();
     }
     public function index(){
        
-        return view('customer.index');
+        return view('customer.index',['brand'=>$this->brand,'brand1'=>$this->brand1]);
     }
     public function indexold(){
         $userlist = User::all();

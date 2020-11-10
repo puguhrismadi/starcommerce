@@ -1,5 +1,5 @@
 @extends('index')
-@section('title','Laptop')
+@section('title','Homepage')
 @section('content')
 
 

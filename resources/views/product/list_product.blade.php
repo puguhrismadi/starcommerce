@@ -1,5 +1,5 @@
 @extends('index')
-@section('title','Laptop')
+@section('title',$slug)
 @section('content')
 <style>
     #pagebar ul>li {
@@ -53,6 +53,10 @@
                     {{$kategori->nama}}
                 </h1>
                 @endforeach
+                <div class="alert alert-success d-none" id="userFilter">
+                    <h3  id='userFilter'>Your Filter : </h3>
+                </div>
+               
                 <div class="uk-text-meta uk-margin-xsmall-top">{{$ktgterpilih}} items</div>
             </div>
             <div>
@@ -219,7 +223,7 @@
                                                     <div class="tm-product-card-body">
                                                         <div class="tm-product-card-info">
                                                             <div class="uk-text-meta uk-margin-xsmall-bottom">
-                                                                Laptop
+                                                                {{$slug}}
                                                             </div>
                                                             <h3 class="tm-product-card-title">
                                                                 <a class="uk-link-heading"
@@ -316,14 +320,14 @@
            
             // $('#btnFilter').attr('uk-icon','icon: search; ratio: .75');
             // $('#btnFilter').html(' Filter');
-            $('#res_message').show();
-            $('#res_message').html(response.msg);
-            $('#msg_div').removeClass('d-none');
+            $('#userFilter').show();
+            $('#userFilter').html(response.msg);
+            $('#userFilter').removeClass('d-none');
 
-            document.getElementById("contact_us").reset(); 
+            
             setTimeout(function(){
-            $('#res_message').hide();
-            $('#msg_div').hide();
+            $('#userFilter').hide();
+            $('#userFilter').hide();
             },10000);
          //--------------------------
             }});

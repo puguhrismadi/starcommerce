@@ -6,14 +6,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Validator,Redirect,Response;
 use App\User;
+use App\Brand;
 use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
+    var $brand,$brand1,$brand2;
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->brand1 = Brand::all();
+        $this->brand2 = Brand::all();
+        $this->brand = Brand::all();
+    }
     public function register(){
         return view('customer.register');
     }
     public function login(){
-        return view('customer.login');
+        return "test login";
+        //return view('customer.login',['brand'=>$this->brand,'brand1'=>$this->brand1]);
     }
     public function proses_register(Request $request){
        
